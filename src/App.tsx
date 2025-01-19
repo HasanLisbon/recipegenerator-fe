@@ -95,7 +95,6 @@ function App() {
     const baseUrl = "https://recipegenerator-t3ch.onrender.com";
     const url = `${baseUrl}/recipe-gen?${queryString}`;
 
-    console.log(url);
     return url;
   };
 
@@ -112,8 +111,6 @@ function App() {
         "content-type": "application/json",
       },
     });
-
-    console.log(response);
 
     const data: Recipe = await response.json();
 
