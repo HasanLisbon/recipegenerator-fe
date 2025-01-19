@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChefHat, Loader2 } from "lucide-react";
 import IngredientInput from "./components/IngredientInput";
+
 import {
   Ingredient,
   Recipe,
@@ -91,7 +92,8 @@ function App() {
     const queryString = new URLSearchParams(params).toString();
 
     // Construct the final URL
-    const url = `http://localhost:8080/recipe-gen?${queryString}`;
+    const baseUrl = "https://recipegenerator-t3ch.onrender.com";
+    const url = `${baseUrl}/recipe-gen?${queryString}`;
 
     console.log(url);
     return url;
