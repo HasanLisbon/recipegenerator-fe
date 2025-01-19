@@ -27,7 +27,7 @@ export default function IngredientInput({ ingredients, setIngredients }: Props) 
   return (
     <div className="space-y-4">
       {ingredients.map((ingredient, index) => (
-        <div key={index} className="flex items-center gap-4 group">
+        <div key={index} className="flex flex-wrap items-center gap-4 group">
           <input
             type="text"
             value={ingredient.name}
